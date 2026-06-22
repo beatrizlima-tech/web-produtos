@@ -1,34 +1,87 @@
 # 🛍️ Web Produtos
 
-Aplicação web desenvolvida com **Angular 21** para gerenciamento de produtos, consumindo uma API REST hospedada na **Microsoft Azure**.
+<p align="center">
+  Aplicação Front-End desenvolvida com Angular 21 para gerenciamento de produtos, integrada a uma API REST hospedada na Microsoft Azure.
+</p>
 
-O sistema permite realizar operações completas de **CRUD (Create, Read, Update e Delete)** através de uma interface moderna, responsiva e intuitiva.
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-21-red" />
+  <img src="https://img.shields.io/badge/TypeScript-Latest-blue" />
+  <img src="https://img.shields.io/badge/Bootstrap-5-purple" />
+  <img src="https://img.shields.io/badge/API-REST-green" />
+  <img src="https://img.shields.io/badge/Azure-Cloud-0078D4" />
+</p>
+
+---
+
+## 📖 Sobre o Projeto
+
+O **Web Produtos** é uma aplicação SPA (Single Page Application) desenvolvida em Angular para gerenciamento de produtos.
+
+A aplicação realiza integração com uma API REST publicada na Microsoft Azure, permitindo operações completas de cadastro, consulta, atualização e exclusão de produtos através de uma interface moderna e responsiva.
+
+Este projeto foi desenvolvido com foco em boas práticas de desenvolvimento Front-End, componentização, integração HTTP e consumo de APIs.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* ✅ Cadastro de produtos
-* ✅ Consulta de produtos
-* ✅ Atualização de produtos
-* ✅ Exclusão de produtos
-* ✅ Consumo de API REST com HttpClient
-* ✅ Formulários reativos com validações
-* ✅ Interface responsiva utilizando Bootstrap
-* ✅ Atualização dinâmica da listagem
+### 📋 Consulta de Produtos
+
+* Listagem dinâmica dos produtos cadastrados
+* Atualização automática após operações
+
+### ➕ Cadastro
+
+* Inclusão de novos produtos
+* Validação de campos obrigatórios
+
+### ✏️ Atualização
+
+* Edição de registros existentes
+* Carregamento automático dos dados selecionados
+
+### 🗑️ Exclusão
+
+* Remoção de produtos cadastrados
+* Confirmação antes da exclusão
+
+### 🌐 Integração com API
+
+* Comunicação via HttpClient
+* Consumo de endpoints REST
+* Operações assíncronas
+
+---
+
+## 🏗️ Arquitetura
+
+```text
+Angular 21
+    │
+    ▼
+HttpClient
+    │
+    ▼
+REST API
+    │
+    ▼
+Microsoft Azure
+```
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* Angular 21
-* TypeScript
-* Bootstrap 5
-* HttpClient
-* Reactive Forms
-* Signals
-* REST API
-* Microsoft Azure
+| Tecnologia        | Finalidade                      |
+| ----------------- | ------------------------------- |
+| Angular 21        | Framework Front-End             |
+| TypeScript        | Linguagem principal             |
+| Bootstrap 5       | Interface responsiva            |
+| Reactive Forms    | Formulários e validações        |
+| Signals           | Gerenciamento reativo de estado |
+| HttpClient        | Comunicação com API             |
+| Azure App Service | Hospedagem da API               |
 
 ---
 
@@ -36,65 +89,39 @@ O sistema permite realizar operações completas de **CRUD (Create, Read, Update
 
 ```text
 src
- ├── app
- │   ├── app.ts
- │   ├── app.html
- │   ├── app.css
- │   ├── app.config.ts
- │   └── app.routes.ts
- ├── main.ts
- └── index.html
+│
+├── app
+│   ├── app.ts
+│   ├── app.html
+│   ├── app.css
+│   ├── app.config.ts
+│   └── app.routes.ts
+│
+├── main.ts
+└── index.html
 ```
 
 ---
 
-## 🔗 Integração com API
+## 🔗 API Consumida
 
-A aplicação consome uma API REST hospedada na Azure:
+A aplicação consome uma API REST responsável pelo gerenciamento dos produtos.
 
-```text
-/api/v1/produtos
-```
+### Endpoints
 
-Operações disponíveis:
-
-| Método | Endpoint       | Descrição         |
-| ------ | -------------- | ----------------- |
-| GET    | /produtos      | Listar produtos   |
-| GET    | /produtos/{id} | Consultar produto |
-| POST   | /produtos      | Cadastrar produto |
-| PUT    | /produtos/{id} | Atualizar produto |
-| DELETE | /produtos/{id} | Excluir produto   |
+| Método | Endpoint              | Descrição         |
+| ------ | --------------------- | ----------------- |
+| GET    | /api/v1/produtos      | Listar produtos   |
+| GET    | /api/v1/produtos/{id} | Obter produto     |
+| POST   | /api/v1/produtos      | Cadastrar produto |
+| PUT    | /api/v1/produtos/{id} | Atualizar produto |
+| DELETE | /api/v1/produtos/{id} | Excluir produto   |
 
 ---
 
-## 📸 Funcionalidades da Interface
+## ▶️ Executando o Projeto
 
-### Cadastro
-
-Permite registrar novos produtos informando:
-
-* Nome
-* Preço
-* Quantidade
-
-### Consulta
-
-Exibe todos os produtos cadastrados em uma tabela dinâmica.
-
-### Edição
-
-Atualiza informações de produtos existentes.
-
-### Exclusão
-
-Remove produtos cadastrados mediante confirmação.
-
----
-
-## ▶️ Como executar
-
-### Clonar o projeto
+### Clonar o repositório
 
 ```bash
 git clone https://github.com/beatrizlima-tech/web-produtos.git
@@ -112,7 +139,7 @@ cd web-produtos
 npm install
 ```
 
-### Executar aplicação
+### Executar
 
 ```bash
 ng serve
@@ -126,8 +153,22 @@ http://localhost:4200
 
 ---
 
+## 💡 Conceitos Aplicados
+
+* Componentização
+* CRUD
+* Consumo de API REST
+* Reactive Forms
+* Signals
+* TypeScript
+* Responsividade
+* Integração Front-End e Back-End
+* Deploy em Nuvem
+
+---
+
 ## 👩‍💻 Desenvolvedora
 
-Beatriz Lima
+**Beatriz Lima**
 
-Projeto desenvolvido para prática de desenvolvimento Front-End com Angular e integração com APIs REST.
+Desenvolvedora Java Full Stack em formação, com foco em Java, Spring Boot, Angular, APIs REST e aplicações em nuvem.
