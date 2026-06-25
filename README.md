@@ -1,95 +1,48 @@
-# 🛍️ Web Produtos
+# 📦 Web Produtos
 
-<p align="center">
-  Aplicação Front-End desenvolvida com Angular 21 para gerenciamento de produtos, integrada a uma API REST hospedada na Microsoft Azure.
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Angular-21-red" />
-  <img src="https://img.shields.io/badge/TypeScript-Latest-blue" />
-  <img src="https://img.shields.io/badge/Bootstrap-5-purple" />
-  <img src="https://img.shields.io/badge/API-REST-green" />
-  <img src="https://img.shields.io/badge/Azure-Cloud-0078D4" />
-</p>
+![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge\&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge\&logo=typescript)
+![REST API](https://img.shields.io/badge/API-REST-009688?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge)
 
 ---
 
-## 📖 Sobre o Projeto
+# 📌 Sobre o projeto
 
-O **Web Produtos** é uma aplicação SPA (Single Page Application) desenvolvida em Angular para gerenciamento de produtos.
+O **Web Produtos** é uma aplicação frontend desenvolvida com **Angular 21** para consulta de produtos através do consumo de uma API REST.
 
-A aplicação realiza integração com uma API REST publicada na Microsoft Azure, permitindo operações completas de cadastro, consulta, atualização e exclusão de produtos através de uma interface moderna e responsiva.
+A aplicação oferece uma interface simples para pesquisa de produtos por nome, utilizando **HttpClient** para comunicação com o backend e apresentando uma estrutura baseada em componentes standalone.
 
-Este projeto foi desenvolvido com foco em boas práticas de desenvolvimento Front-End, componentização, integração HTTP e consumo de APIs.
-
----
-
-## 🚀 Funcionalidades
-
-### 📋 Consulta de Produtos
-
-* Listagem dinâmica dos produtos cadastrados
-* Atualização automática após operações
-
-### ➕ Cadastro
-
-* Inclusão de novos produtos
-* Validação de campos obrigatórios
-
-### ✏️ Atualização
-
-* Edição de registros existentes
-* Carregamento automático dos dados selecionados
-
-### 🗑️ Exclusão
-
-* Remoção de produtos cadastrados
-* Confirmação antes da exclusão
-
-### 🌐 Integração com API
-
-* Comunicação via HttpClient
-* Consumo de endpoints REST
-* Operações assíncronas
+Este projeto foi desenvolvido com foco no aprendizado de integração entre aplicações Angular e APIs REST.
 
 ---
 
-## 🏗️ Arquitetura
+# 🚀 Funcionalidades
+
+* Consulta de produtos por nome
+* Consumo de API REST utilizando HttpClient
+* Interface responsiva
+* Componentes Standalone
+* Comunicação assíncrona com backend
+
+---
+
+# 🧱 Tecnologias Utilizadas
+
+* Angular 21
+* TypeScript
+* HTML5
+* CSS3
+* HttpClient
+* REST API
+
+---
+
+# 🏗️ Estrutura do Projeto
 
 ```text
-Angular 21
-    │
-    ▼
-HttpClient
-    │
-    ▼
-REST API
-    │
-    ▼
-Microsoft Azure
-```
+src/
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia        | Finalidade                      |
-| ----------------- | ------------------------------- |
-| Angular 21        | Framework Front-End             |
-| TypeScript        | Linguagem principal             |
-| Bootstrap 5       | Interface responsiva            |
-| Reactive Forms    | Formulários e validações        |
-| Signals           | Gerenciamento reativo de estado |
-| HttpClient        | Comunicação com API             |
-| Azure App Service | Hospedagem da API               |
-
----
-
-## 📂 Estrutura do Projeto
-
-```text
-src
-│
 ├── app
 │   ├── app.ts
 │   ├── app.html
@@ -103,72 +56,92 @@ src
 
 ---
 
-## 🔗 API Consumida
+# 🔗 Integração com API
 
-A aplicação consome uma API REST responsável pelo gerenciamento dos produtos.
+A aplicação realiza requisições HTTP para uma API responsável pelo gerenciamento de produtos.
 
-### Endpoints
+### Endpoint consumido
 
-| Método | Endpoint              | Descrição         |
-| ------ | --------------------- | ----------------- |
-| GET    | /api/v1/produtos      | Listar produtos   |
-| GET    | /api/v1/produtos/{id} | Obter produto     |
-| POST   | /api/v1/produtos      | Cadastrar produto |
-| PUT    | /api/v1/produtos/{id} | Atualizar produto |
-| DELETE | /api/v1/produtos/{id} | Excluir produto   |
+| Método | Endpoint                              | Descrição                   |
+| ------ | ------------------------------------- | --------------------------- |
+| GET    | `/api/v1/produtos/listar?nome={nome}` | Consulta produtos pelo nome |
 
 ---
 
-## ▶️ Executando o Projeto
+# ⚙️ Como Executar
 
-### Clonar o repositório
-
-```bash
-git clone https://github.com/beatrizlima-tech/web-produtos.git
-```
-
-### Entrar na pasta
+## 1. Clone o repositório
 
 ```bash
-cd web-produtos
+git clone https://github.com/beatrizlima-tech/web-produto.git
 ```
 
-### Instalar dependências
+## 2. Instale as dependências
 
 ```bash
 npm install
 ```
 
-### Executar
+## 3. Execute a aplicação
 
 ```bash
 ng serve
 ```
 
-Acesse:
+## 4. Acesse
 
 ```text
 http://localhost:4200
 ```
 
+> Certifique-se de que a API de produtos esteja em execução para que a consulta funcione corretamente.
+
 ---
 
-## 💡 Conceitos Aplicados
+# 📊 Arquitetura
 
-* Componentização
-* CRUD
-* Consumo de API REST
-* Reactive Forms
-* Signals
+```text
+Angular
+    │
+    ▼
+HttpClient
+    │
+    ▼
+API REST
+```
+
+---
+
+# 📚 Conceitos Aplicados
+
+* Componentes Standalone
+* Programação Reativa
+* Consumo de APIs REST
+* HttpClient
 * TypeScript
-* Responsividade
-* Integração Front-End e Back-End
-* Deploy em Nuvem
+* Organização de componentes
+* Integração Frontend e Backend
 
 ---
 
-## 👩‍💻 Desenvolvedora
+# 📌 Melhorias Futuras
 
-**Beatriz Lima**
+* Cadastro de produtos
+* Atualização de produtos
+* Exclusão de produtos
+* Exibição dos resultados em tabela
+* Reactive Forms
+* Feedback visual para o usuário
+* Paginação e filtros
 
-Desenvolvedora Java Full Stack em formação, com foco em Java, Spring Boot, Angular, APIs REST e aplicações em nuvem.
+---
+
+# 👩‍💻 Autora
+
+Desenvolvido por **Beatriz Lima**
+
+🔗 GitHub
+https://github.com/beatrizlima-tech
+
+💼 LinkedIn
+https://www.linkedin.com/in/beatrizlima-tech
