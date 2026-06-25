@@ -9,21 +9,25 @@
 
 # 📌 Sobre o projeto
 
-O **Web Produtos** é uma aplicação frontend desenvolvida com **Angular 21** para consulta de produtos através do consumo de uma API REST.
+O **Web Produtos** é uma aplicação frontend desenvolvida com **Angular 21** para gerenciamento de produtos, consumindo uma API REST desenvolvida em Java com Spring Boot.
 
-A aplicação oferece uma interface simples para pesquisa de produtos por nome, utilizando **HttpClient** para comunicação com o backend e apresentando uma estrutura baseada em componentes standalone.
+A aplicação permite consultar produtos por nome, cadastrar novos produtos e excluir registros, exibindo os dados em uma interface responsiva com tabela, formulário e mensagens de retorno para o usuário.
 
-Este projeto foi desenvolvido com foco no aprendizado de integração entre aplicações Angular e APIs REST.
+Este projeto foi desenvolvido com foco no aprendizado de integração entre frontend Angular e backend REST.
 
 ---
 
 # 🚀 Funcionalidades
 
 * Consulta de produtos por nome
+* Cadastro de novos produtos
+* Exclusão de produtos
+* Exibição dos produtos em tabela
+* Cálculo e exibição do valor total por produto
+* Mensagens de confirmação para o usuário
 * Consumo de API REST utilizando HttpClient
 * Interface responsiva
 * Componentes Standalone
-* Comunicação assíncrona com backend
 
 ---
 
@@ -42,7 +46,6 @@ Este projeto foi desenvolvido com foco no aprendizado de integração entre apli
 
 ```text
 src/
-
 ├── app
 │   ├── app.ts
 │   ├── app.html
@@ -60,11 +63,13 @@ src/
 
 A aplicação realiza requisições HTTP para uma API responsável pelo gerenciamento de produtos.
 
-### Endpoint consumido
+## Endpoints consumidos
 
 | Método | Endpoint                              | Descrição                   |
 | ------ | ------------------------------------- | --------------------------- |
 | GET    | `/api/v1/produtos/listar?nome={nome}` | Consulta produtos pelo nome |
+| POST   | `/api/v1/produtos/criar`              | Cadastra um novo produto    |
+| DELETE | `/api/v1/produtos/excluir/{id}`       | Exclui um produto           |
 
 ---
 
@@ -73,28 +78,34 @@ A aplicação realiza requisições HTTP para uma API responsável pelo gerencia
 ## 1. Clone o repositório
 
 ```bash
-git clone https://github.com/beatrizlima-tech/web-produto.git
+git clone https://github.com/beatrizlima-tech/web-produtos.git
 ```
 
-## 2. Instale as dependências
+## 2. Acesse a pasta do projeto
+
+```bash
+cd web-produtos
+```
+
+## 3. Instale as dependências
 
 ```bash
 npm install
 ```
 
-## 3. Execute a aplicação
+## 4. Execute a aplicação
 
 ```bash
 ng serve
 ```
 
-## 4. Acesse
+## 5. Acesse no navegador
 
 ```text
 http://localhost:4200
 ```
 
-> Certifique-se de que a API de produtos esteja em execução para que a consulta funcione corretamente.
+> Certifique-se de que a API de produtos esteja em execução em `http://localhost:8081`.
 
 ---
 
@@ -107,7 +118,10 @@ Angular
 HttpClient
     │
     ▼
-API REST
+API REST Produtos
+    │
+    ▼
+PostgreSQL
 ```
 
 ---
@@ -115,24 +129,25 @@ API REST
 # 📚 Conceitos Aplicados
 
 * Componentes Standalone
-* Programação Reativa
+* Signals
+* Data Binding
+* Event Binding
+* Diretivas estruturais do Angular
 * Consumo de APIs REST
 * HttpClient
-* TypeScript
-* Organização de componentes
 * Integração Frontend e Backend
+* Organização de interface responsiva
 
 ---
 
 # 📌 Melhorias Futuras
 
-* Cadastro de produtos
-* Atualização de produtos
-* Exclusão de produtos
-* Exibição dos resultados em tabela
+* Edição de produtos
+* Validação de campos do formulário
 * Reactive Forms
-* Feedback visual para o usuário
-* Paginação e filtros
+* Paginação de resultados
+* Filtros avançados
+* Tratamento de erros mais detalhado
 
 ---
 
